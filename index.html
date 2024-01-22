@@ -16,37 +16,57 @@
 
     <main>
         <div class="title">
-            <h1>Interested in our business pricing?</h1>
-            <p>Fill out the form to view details and we’ll contact you as soon as possible.</p>
+            <h1>Interested in our <br> business pricing?</h1>
+            <p>Fill out the form to view details and we’ll <br> contact you as soon as possible.</p>
         </div>
 
         <div class="card">
             <form method="post">
-                <div>
-                    <label for="iname">Name</label>
-                    <input type="text" name="name" id="iname">
+                <div class="form-flex">
 
-                    <label for="iemail">Email</label>
-                    <input type="email" name="email" id="iemail">
+                    <div class="name flex-column">
+                        <label for="iname">Name</label>
+                        <input type="text" name="name" id="iname">
+                    </div>
+
+                    <div class="email flex-column">
+                        <label for="iemail">Email</label>
+                        <input type="email" name="email" id="iemail">
+                    </div>
                     
                 
-                    <div class="company-size">
+                    <div class="company-size flex-column">
+
                         <label for="icompanySize">Company Size</label>
                         <select id="icompanySize" name="Company Size">
                             <option value="0-50">0-50 Employees</option>
                             <option value="50-100">50-100 Employees</option>
-                            <option value="100-150">100-150 Employees</option>
-                            <option value="150-200">150-200 Employees</option>
-                            <option value="200-300">200-300 Employees</option>
+                            <option value="101-200">101-200 Employees</option>
+                            <option value="201-400">201-400 Employees</option>
                         </select>
+                    
                     </div>
                 
-                </div>
+                    <div class="subject-size flex-column">
+
+                        <label for="isubject">Subject</label>
+                        <select id="isubject" name="subject">
+                           <option value="building-landing-pages">Building Landing Pages</option>
+                           <option value="building-online-store">Building Online Store</option>
+                           <option value="recreating-projects">Recrating Projects</option>
+                        </select>
+                    
+                    </div>
+
+                    <div class="text-message">
+                        <textarea name="textarea" id="itextArea" cols="30" rows="10"></textarea>
+                    </div>
+
+                </div><!--form flex-->
 
             </form>
-        </div>
+        </div><!--card-->
     </main>
 
-    <script src="js/script.js"></script>
 </body>
 </html>
