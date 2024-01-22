@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+    
+    <header>
+        <div class="img-company">
+            <img src="assets/contact-form-icon.svg">
+        </div>
+    </header>
+
+    <main>
+        <div class="title">
+            <h1>Interested in our business pricing?</h1>
+            <p>Fill out the form to view details and we’ll contact you as soon as possible.</p>
+        </div>
+
+        <div class="card">
+            <form method="post">
+                <div>
+                    <label for="iname">Name</label>
+                    <input type="text" name="name" id="iname">
+
+                    <label for="iemail">Email</label>
+                    <input type="email" name="email" id="iemail">
+                    
+                
+                    <div class="company-size">
+                        <label for="icompanySize">Company Size</label>
+                        <select id="icompanySize" name="Company Size">
+                            <option value="0-50">0-50 Employees</option>
+                            <option value="50-100">50-100 Employees</option>
+                            <option value="100-150">100-150 Employees</option>
+                            <option value="150-200">150-200 Employees</option>
+                            <option value="200-300">200-300 Employees</option>
+                        </select>
+                    </div>
+                
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
