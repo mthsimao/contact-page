@@ -17,6 +17,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-vietnam);
 }
 
 body {
@@ -25,9 +26,6 @@ body {
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    height: 100vh;
-
-    font-family: var(--font-vietnam);
     color: var(--cor-branco);
     max-width: 1280px;
     margin: 0 auto;
@@ -45,6 +43,8 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding-bottom: 2rem;
+    padding: 12px;
 }
 
 .title {
@@ -55,11 +55,28 @@ main {
     margin-bottom: 1rem;
 }
 
-.form-flex {
+.card {
+    background-color: #ffffff3f;
+    border-radius: 20px;
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    margin: 0 1rem;
+}
+
+.form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     place-items: center;
     gap: 1rem;
+}
+
+.form-top {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   place-items: center;
+   gap: 32px;
+   width: 100%;
 }
 
 .flex-column {
@@ -68,4 +85,120 @@ main {
     align-items: left;
     justify-content: left;
     text-align: left;
+    gap: .5rem;
+    width: 100%;
+}
+
+label {
+    font-family: var(--font-vietnam);
+    font-size: .925rem;
+}
+
+input::placeholder {
+    letter-spacing: .4px;
+    color: #75757565;
+    font-size: 1rem;
+}
+
+#iname, #iemail, #icompanySize, #isubject {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    color: var(--cor-azulEscuro);
+    font-size: 1.025rem;
+    font-weight: bolder;
+    text-indent: 12px;
+    outline: none;
+    padding: 18px 8px;
+    width: 100%;
+}
+
+#iname:focus, #iemail:focus, #icompanySize:focus, #isubject:focus, #itextArea:focus {
+    border-color: var(--cor-azulEscuro);
+}
+
+select {
+    padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subject-size, .company-size {
+    position: relative;
+    width: 100%;
+}
+
+.subject-size::after, .company-size::after {
+    content: "";
+    background: url(/assets/Expand_down.svg) no-repeat center/cover;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    top: 65%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.text-message {
+    margin-top: 16px;
+    width: 100%;
+}
+
+#itextArea {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    font-size: 1.025rem;
+    font-weight: bold;
+    color: var(--cor-azulEscuro);
+    outline: none;
+    padding: 22px;
+    width: 100%;
+}
+
+.div-btn {
+    width: 100%;
+}
+
+#button {
+    background-color: var(--cor-branco);
+    border: none;
+    border-radius: 15px;
+    color: var(--cor-roxa);
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
+    margin-top: 12px;
+    padding: 22px 0;
+    width: 100%;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: var(--cor-roxa);
+    color: white;
+}
+
+@media screen and (max-width: 855px) {
+    .title {
+        font-size: 1.4rem;
+    }
+    
+    .title h1 {
+        margin-bottom: 1rem;
+    }
+    
+
+    .form-top {
+        grid-template-columns: 1fr; 
+   }
+}
+
+@media screen and (max-width: 470px){
+    .title {
+        font-size: 1.2rem;
+    }
 }

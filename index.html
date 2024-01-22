@@ -22,44 +22,46 @@
 
         <div class="card">
             <form method="post">
-                <div class="form-flex">
+                <div class="form-grid">
 
-                    <div class="name flex-column">
-                        <label for="iname">Name</label>
-                        <input type="text" name="name" id="iname">
+                    <div class="form-top">
+                        <div class="name flex-column">
+                            <label for="iname">Name</label>
+                            <input type="text" name="name" id="iname" required placeholder="Ethan Johnson">
+                        </div>
+                        <div class="email flex-column">
+                            <label for="iemail">Company Email</label>
+                            <input type="email" name="email" id="iemail" required placeholder="ethan@johnson.com">
+                        </div>
+                        
+                        <div class="company-size flex-column">
+                            <label for="icompanySize">Company Size</label>
+                            <select id="icompanySize" name="Company Size">
+                                <option value="0-50">0-50 Employees</option>
+                                <option value="50-100">50-100 Employees</option>
+                                <option value="101-200">101-200 Employees</option>
+                                <option value="201-400">201-400 Employees</option>
+                            </select>
+                        
+                        </div>
+                        <div class="subject-size flex-column">
+                            <label for="isubject">Subject</label>
+                            <select id="isubject" name="subject">
+                               <option value="building-landing-pages">Building Landing Pages</option>
+                               <option value="building-online-store">Building Online Store</option>
+                               <option value="recreating-projects">Recrating Projects</option>
+                            </select>
+                        
+                        </div>
                     </div>
 
-                    <div class="email flex-column">
-                        <label for="iemail">Email</label>
-                        <input type="email" name="email" id="iemail">
-                    </div>
-                    
-                
-                    <div class="company-size flex-column">
-
-                        <label for="icompanySize">Company Size</label>
-                        <select id="icompanySize" name="Company Size">
-                            <option value="0-50">0-50 Employees</option>
-                            <option value="50-100">50-100 Employees</option>
-                            <option value="101-200">101-200 Employees</option>
-                            <option value="201-400">201-400 Employees</option>
-                        </select>
-                    
-                    </div>
-                
-                    <div class="subject-size flex-column">
-
-                        <label for="isubject">Subject</label>
-                        <select id="isubject" name="subject">
-                           <option value="building-landing-pages">Building Landing Pages</option>
-                           <option value="building-online-store">Building Online Store</option>
-                           <option value="recreating-projects">Recrating Projects</option>
-                        </select>
-                    
+                    <div class="text-message flex-column">
+                        <label for="itextArea">Message</label>
+                        <textarea name="textarea" id="itextArea" cols="30" rows="10">50-100 employees</textarea>
                     </div>
 
-                    <div class="text-message">
-                        <textarea name="textarea" id="itextArea" cols="30" rows="10"></textarea>
+                    <div class="div-btn">
+                        <button type="submit" id="button">Contact Sales</button>
                     </div>
 
                 </div><!--form flex-->
